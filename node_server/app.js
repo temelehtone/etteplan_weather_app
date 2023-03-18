@@ -14,7 +14,7 @@ const baseURL = "https://api.openweathermap.org/data/2.5/forecast?";
 
 app.get("/getData/:lat&:lon", (req, res, next) => {
   fetch(
-    `${baseURL}lat=${req.params.lat}&lon=${req.params.lon}&appid=${process.env.WEATHER_API_KEY}`
+    `${baseURL}lat=${req.params.lat}&lon=${req.params.lon}&appid=${process.env.WEATHER_API_KEY}&units=metric`
   )
     .then((response) => response.json())
     .then((data) => res.json(data))

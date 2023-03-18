@@ -1,10 +1,10 @@
 import React from 'react'
 import WeatherCard from './WeatherCard'
 
-const WeatherCardWrapper = () => {
+const WeatherCardWrapper = ({data}) => {
   return (
     <div className='flex gap-2'>
-      <WeatherCard />
+      <WeatherCard data={data}/>
     </div>
   )
 }

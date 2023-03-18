@@ -6,8 +6,4 @@ const coordinates = [
   { lat: 60.25, lon: 24.6667 },
 ];
 
-const temperatureConverter = (temp) => {
-    return Math.round(273.15 - temp);
-  }
-
-export default { coordinates, cities, temperatureConverter };
+export default { coordinates, cities };

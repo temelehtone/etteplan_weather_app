@@ -8,3 +8,15 @@ html, body {
 body {
     background-color: #F8F9FA;
 }
+@media screen and (max-width: 767px) {
+    .weather-card-wrapper {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .weather-card-wrapper::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+}
+.city-grid {
+    grid-template-columns: 1fr 2fr;
+}
