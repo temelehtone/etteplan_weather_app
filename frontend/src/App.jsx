@@ -4,6 +4,7 @@ import coordinates from "./utils/coordinates";
 import Header from "./components/Header";
 import Cityinfo from "./components/Cityinfo";
 import SelectBox from "./components/SelectBox";
+import WeatherCardWrapper from "./components/WeatherCardWrapper";
 
 function App() {
   const [data, setData] = useState(null);
@@ -14,10 +15,11 @@ function App() {
       .then((data) => console.log(data));
   }, []);
   return (
-    <div className="App flex min-h-full align-center flex-col justify-center px-6">
+    <div className="App flex min-h-full gap-4 align-center flex-col justify-center px-6">
       <Header />
       <SelectBox />
       <Cityinfo />
+      <WeatherCardWrapper />
     </div>
   );
 }

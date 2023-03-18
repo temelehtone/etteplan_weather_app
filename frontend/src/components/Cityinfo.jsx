@@ -2,9 +2,9 @@ import React from "react";
 
 const Cityinfo = () => {
   return (
-    <div className=" mt-100 p-5 border-2 bg-white border-l-gray-border rounded-md grid grid-cols-2 grid-rows-2 gap-10">
+    <div className="p-4 border-2 bg-white border-l-gray-border rounded-md grid grid-cols-2 grid-rows-2 gap-5">
       <div className="">
-        <h3 className="">Espoo</h3>
+        <h3 className="text-xl text-main-text">Espoo</h3>
         <span className="text-sm text-gray-text">Scattered clouds</span>
       </div>
       <div className="mt-100 flex gap-2 justify-end">
