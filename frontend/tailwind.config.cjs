@@ -20,6 +20,7 @@ module.exports = {
         xl: '15px',
         '2xl': '19px',
         '3xl': '26px',
+        '23': '23px',
       }
     }
   },

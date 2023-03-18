@@ -9,6 +9,7 @@ const Cityinfo = ({data}) => {
     } else if(firstData.snow) {
         precipiation = firstData.snow["3h"]
     } 
+    // Change "n" to "d" to get images with colors
     const imageUrl = `https://openweathermap.org/img/wn/${firstData.weather[0].icon.slice(0, -1) + "d"}.png`
     const time = currentDate.toLocaleTimeString("fi").split(".");
   return (
