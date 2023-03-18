@@ -1,10 +1,13 @@
+const cities = ["Tampere", "Jyväskylä", "Kuopio", "Espoo"];
+const coordinates = [
+  { lat: 61.4991, lon: 23.7871 },
+  { lat: 62.2415, lon: 25.7209 },
+  { lat: 62.8924, lon: 27.677 },
+  { lat: 60.25, lon: 24.6667 },
+];
 
-const cities = ["Tampere", "Jyväskylä", "Kuopio", "Espoo"]
-const coordinates = {
-    tampere: { lat: 61.4991, lon: 23.7871 },
-    jyvaskyla: { lat: 62.2415, lon: 25.7209 },
-    kuopio: { lat: 62.8924, lon: 27.677 },
-    espoo: { lat: 60.25, lon: 24.6667 }
-}
+const temperatureConverter = (temp) => {
+    return Math.round(273.15 - temp);
+  }
 
-export default { coordinates, cities };
+export default { coordinates, cities, temperatureConverter };

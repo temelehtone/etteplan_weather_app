@@ -1,25 +1,35 @@
 import React from "react";
+import helper from "../utils/helper.js"
 
-const Cityinfo = () => {
+const Cityinfo = ({data}) => {
+    const currentDate = new Date()
+    const firstData = data.list[0];
+    let precipiation;
+    if(firstData.rain) {
+        precipiation = firstData.rain["3h"]
+    } else if(firstData.snow) {
+        precipiation = firstData.snow["3h"]
+    } 
+    const imageUrl = `https://openweathermap.org/img/wn/${firstData.weather[0].icon}.png`
   return (
     <div className="p-4 border-2 bg-white border-l-gray-border rounded-md grid grid-cols-2 grid-rows-2 gap-5">
       <div className="">
-        <h3 className="text-xl text-main-text">Espoo</h3>
-        <span className="text-sm text-gray-text">Scattered clouds</span>
+        <p className="text-xl text-main-text">{data.city.name}</p>
+        <p className="text-sm text-gray-text">{firstData.weather[0].main}</p>
       </div>
       <div className="mt-100 flex gap-2 justify-end">
-        <h3 className="">IMG</h3>
-        <span className="">0 C</span>
+        <img src={imageUrl} className="" />
+        <p className="my-auto text-xl align-middle">{helper.temperatureConverter(firstData.main.temp)} °C</p>
       </div>
 
       <div className="">
-        <h3 className="">May 2nd</h3>
-        <span className="text-sm text-gray-text">11:54</span>
+        <p className="">{currentDate.toDateString()}</p>
+        <p className="text-sm text-gray-text">{currentDate.getHours()}:{currentDate.getMinutes()}</p>
       </div>
       <div className="mt-100 text-end ">
-        <p className="text-sm text-gray-text">Wind: 5.1 m/s</p>
-        <p className="text-sm text-gray-text">Humidity: 86 %</p>
-        <p className="text-sm text-gray-text">Precipitation (3h): 5 mm</p>
+        <p className="text-sm text-gray-text">Wind: {firstData.wind.speed} m/s</p>
+        <p className="text-sm text-gray-text">Humidity: {firstData.main.humidity} %</p>
+        {precipiation && <p className="text-sm text-gray-text">Precipitation (3h): {Math.round(precipiation)} mm</p>}
       </div>
     </div>
   );

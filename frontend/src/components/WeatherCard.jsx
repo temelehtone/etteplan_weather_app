@@ -1,7 +1,8 @@
 import React from "react";
 
-const WeatherCard = () => {
+const WeatherCard = ({data}) => {
   return (
+    
     <div className="border-2 text-center bg-white border-l-gray-border rounded-md">
       <div className=" p-4">
         <p className="text-gray-text text-base">15:00</p>
