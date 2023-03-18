@@ -7,7 +7,6 @@ const getWeatherData = async (lat, lon) => {
 
   const request = axios.get(`getData/${lat}&${lon}`);
   const response = await request;
-  console.log(response)
   return response.data;
 };
 

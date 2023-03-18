@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import weatherService from './api'
-import coordinates from './utils/coordinates'
+import { useEffect, useState } from "react";
+import weatherService from "./api";
+import coordinates from "./utils/coordinates";
+import Header from "./components/Header";
 
 function App() {
-  
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    
-    weatherService.getWeatherData(coordinates.tampere.lat, coordinates.tampere.lon)
-  }, [])
-  return (
-    <div className="App">
-       
-    </div>
-  )
+    weatherService
+      .getWeatherData(coordinates.tampere.lat, coordinates.tampere.lon)
+      .then((data) => console.log(data));
+  }, []);
+  return <div className="App bg-body-bg">
+      <Header />
+    </div>;
 }
 
-export default App
+export default App;
