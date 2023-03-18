@@ -5,7 +5,7 @@
 Steps:
 * Clone this repository
 * Open terminal and navigate to the root of this repository
-* Add your weather API key to the .env file in directory node_server. Name the key WEATHER_API_KEY
+* Create .env file in directory node_server and add your weather API key to the .env. Name the key WEATHER_API_KEY
 * cd frontend
 * npm run build
 * cd ../node_server
