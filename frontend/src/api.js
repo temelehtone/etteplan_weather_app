@@ -1,7 +1,5 @@
 import axios from "axios";
-const baseUrl =
-  axios.baseUrl !== "http://localhost:3000" ? "http://localhost:3001/" : "/";
-axios.defaults.baseURL = baseUrl;
+axios.defaults.baseURL = "http://localhost:3001/";
 
 const getWeatherData = async (coordinates) => {
   const promiseArray = coordinates.map((c) =>
