@@ -1,8 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
+import weatherService from './api'
+import coordinates from './utils/coordinates'
 
 function App() {
-  console.log(import.meta.env.VITE_WEATHER_API_KEY);
+  
+
+  useEffect(() => {
+    
+    weatherService.getWeatherData(coordinates.tampere.lat, coordinates.tampere.lon)
+  }, [])
   return (
     <div className="App">
        
