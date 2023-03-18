@@ -1,14 +1,15 @@
 # etteplan_weather_app
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+<!-- How to setup -->
+## How to setup
 
+Steps:
+* Clone this repository
+* Open terminal and navigate to the root of this repository
+* Add your weather API key to the .env file in directory node_server. Name the key WEATHER_API_KEY
+* cd frontend
+* npm run build
+* cd ../node_server
+* npm start
 
+Finally go to http://localhost:3001.
 
-<!-- PROJECT SHIELDS -->
