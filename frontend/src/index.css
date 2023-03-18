@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    min-height: 100vh;
+html,
+body {
+  min-height: 100vh;
 }
 body {
-    background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 @media screen and (max-width: 767px) {
-    .weather-card-wrapper {
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        scrollbar-width: none;  /* Firefox */
-    }
-    .weather-card-wrapper::-webkit-scrollbar { 
-        display: none;  /* Safari and Chrome */
-    }
+  .weather-card-wrapper {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .weather-card-wrapper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }
 .city-grid {
-    grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
 }

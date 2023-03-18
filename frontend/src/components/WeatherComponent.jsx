@@ -2,7 +2,7 @@ import React from "react";
 import Cityinfo from "./Cityinfo";
 import WeatherCardWrapper from "./WeatherCardWrapper";
 
-const WeatherComponent = ({data}) => {
+const WeatherComponent = ({ data }) => {
   return (
     <div
       key={data.city.id}
